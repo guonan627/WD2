@@ -1,0 +1,524 @@
+@charset "utf-8";
+
+html, body, div, span, header, section, nav, article,footer, a, p, h1, h2, strong{
+    border:0; margin:0; padding:0
+} 
+
+html{
+    font-family: Arial;
+}
+
+.flex-container {
+    display:flex;
+    flex-wrap:wrap;
+    width: 90%;
+    min-height:100%;
+    margin:0 auto;    
+    background-image:url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;    
+}
+/*==============================
+        HOME PAGE 
+==============================*/
+header {
+    width:100%;
+    min-height: 550px;
+    order: 1;
+    background-image:url(../images/headerbackground.jpg);
+    filter: brightness(120%);
+    background-size: cover;
+}
+header div.filter {
+    background-color: rgba(256, 256, 256, 0.3);
+    min-height: 100%;
+}
+header div>div {
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+header div>div h1{
+    width: 40%;
+    color: rgb(65, 0, 126);
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+header div>div img {
+    width: 10%;
+}
+header div div:last-child{
+    font-size: 50px;
+    justify-content: center;
+    line-height: 300px;
+    color:rgb(65, 0, 126);
+    text-shadow: 1px 1px orange;
+    font-weight: 600;
+}
+nav {
+    width:100%;
+    min-height:100px;
+    background-color: rgba(245, 248, 235, 0.6); /*Filter background*/
+    order: 2;
+}
+.mobilemenu {
+    display:none;
+}
+.navlogo {
+    display: none;
+}
+ul.desktopmenu {
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+}
+ul.desktopmenu li{
+    padding: 15px 5px;
+    width: 16%;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top: 15px;
+    border-radius:10px;
+    min-height: 30px;
+    background: linear-gradient(rgb(180, 68, 28),lightgrey);
+    color:black;
+    transition: transform 1s, background 1s, font-size 1s, border-radius 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.desktopmenu li a{
+    text-align: center;
+}
+a:link, a:visited{
+    color:black;
+    text-decoration: none;
+} 
+ul.desktopmenu li:hover{
+    background: orange;
+    transform: scale(1.1, 1.2);
+    border-radius: 10px;
+    color: black;
+} 
+article{
+    order: 3;
+    flex: 1 70%;
+    min-height: auto;
+    background-color: rgba(245, 248, 235, 0.6);  /*Filter background*/
+    padding: 20px;
+}
+article h2 {
+    width: 100%;
+    color: black;
+    font-size: 35px;
+    text-align: justify;
+    padding-left: 50px;
+}
+article h3{
+    font-size: 30px;
+    margin: 10px;
+}
+article p {
+    text-align: justify;
+    font-size: 20px;         
+    padding: 10px;
+}
+.introduction {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#images{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+.pics{
+    width: 30%;
+    margin:15px;
+    padding:10px;
+}
+
+.pics p {
+    text-align: center;
+}
+
+.pics img {
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    order: 4;
+}
+.mobilefooter {
+    display: none;
+}
+.desktopfooter {
+    width: 100%;
+    height: 9em;
+    background: linear-gradient(lightgrey,rgb(180, 68, 28));
+}  
+.footerinfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.sitemap {
+    width: 70%;
+}
+.sitemap div{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+.sitemap a {
+    padding:10px;
+    min-height: 30px;
+    width: 160px;
+    border-radius: 5px;
+    background-color: rgb(212, 170, 91, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.contact{
+    width: 30%;
+}
+.desktopfooter>div:last-child {
+    width:100%;
+    height: 2.5em;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 10px;
+}
+/*=================================
+        GROUP CLASSES 
+=================================*/
+table {
+    width:90%;
+    margin: 40px 0 40px 70px;
+}
+table, th, td {
+    border-collapse: collapse;
+}
+th {
+    padding: 15px;
+    text-align: left; 
+    background-color: lightgreen;
+}
+td{
+    padding: 15px;
+    text-align: left; 
+}
+tr:nth-child(even) {
+    background-color: #eee;
+  }
+tr:nth-child(odd) {
+   background-color: #fff;
+  }
+ 
+/*=================================
+    CONTACT FORM 
+=================================*/
+* {
+    box-sizing: border-box;
+}
+form {
+    margin: 40px 0 40px 70px;
+}
+.labels {
+    float: left;
+    width: 15%;
+    text-align: right;
+    padding-right: 20px;
+}
+.inputs {
+    float: left;
+    width: 70%;
+}
+label {
+    font-size: 25px;
+    padding: 18px 0 18px 0;
+    width:100%;
+    display: inline-block;
+}
+input[type=text], select, textarea {
+    font-size: 20px;
+    width: 90%;
+    padding: 5px;
+    margin: 12px 5%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    min-height:250px;
+}
+input[type=submit] {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    right: 5%;
+    transition: background 1s, transform 1s, font-size 1s;
+}
+input[type=submit]:hover {
+    background-color: rgb(180, 68, 28);
+    transform: scale(1.2,1.2);
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both; /* Clear floats after the columns */
+}
+/*=================================
+        OUR PHILOSOPHY 
+=================================*/
+.philosophy{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.philosophy>div {
+    width: 65%;
+    text-align: justify;
+    padding: 30px;
+    padding-right: 0;
+}
+.philosophy .ownerpic{
+    width: 35%;
+    padding: 30px;
+    padding-right: 0;
+}
+
+/*=================================
+        CONTACT US 
+=================================*/
+.branchbox{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    width: 100%;
+}
+.branch {
+    border: 2px solid rgb(122, 139, 26);
+    border-radius: 15px;
+    width: 30%;
+    padding:10px;
+    margin: 20px 20px 20px 0;
+    overflow: auto;    
+}
+.branch p {
+    text-align: left;
+}
+/*================================================================================
+    RESPONSIVE LAYOUT FOR MOBILE
+==================================================================================*/
+
+@media only screen and (max-width: 1000px) {
+    .flex-container {
+        width:100%;
+    }
+    .flex-container p {
+        font-size: 20px;
+    }
+    header {
+        display: none;
+    }
+    article,nav,footer {
+        width: 100%;
+    }
+    ul.desktopmenu {
+        display:none;
+    }
+    /*================================================
+        HAMBURGER MENU FOR MOBILE
+    ================================================*/
+    nav{
+        display: flex;
+        background-color: lightgrey;
+        padding: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 150px;
+    }
+    .mobilemenu {
+        display: block;
+        float: left;
+        width: 50px;
+        height: 50px;        
+        background-image:url(../images/hamburger.png);
+        background-size: cover;
+      }
+    #hamburger {
+        opacity: 0;
+        position: absolute; 
+        margin-left: 2px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+    #hamburger:checked + ul {
+        display:block;
+        margin-left: 5px;
+        margin-top:50px;
+        width: 350px;
+        height: 380px;
+        overflow: hidden;
+    }
+    .check_menu {
+        position: absolute; 
+        margin-left: 5px;
+        margin-top:50px;
+        border-radius:10px;
+        background-color: rgba(180, 180, 180, 0.6);
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.2s ease 0.2s, width 0.2s ease;
+    }
+    .check_menu li {
+        width: 75%;
+        background: rgb(180, 68, 28);
+        padding: 10px;
+        margin:18px;
+        border-radius:5px;        
+        list-style-type: none;
+        transition: transform 0.2s, background 0.2s, font-size 0.2s;
+    }
+    .check_menu li:hover{
+        background: orange; 
+        transform: scale(1.1);        
+    }
+    .navlogo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height:auto;
+    }
+    .navlogo strong {
+        font-size: 40px;
+        width: 40%;
+    }
+    .navlogo img{
+        width: 10%;
+    }
+    article h2{
+        font-size: 35px;
+    }
+    article h3{
+        font-size: 30px;
+    }
+    #images{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+    .pics{
+        width: 80%;
+        margin-left: 15%;
+        padding: 10px;
+    } 
+    .pics p {
+        width: 80%;
+        text-align: center;
+    }
+    .pics img {
+        width:90%;
+    }
+    table,tr,td,th {
+        display: block;
+    }
+    table{
+        margin-left: 30px;
+    }
+    table>tr {
+        display: none;
+    }
+    tr {
+        margin: 0 0 30px 0;
+    }
+    th {
+    padding: 5px;
+    text-align: left; 
+    background-color: lightgreen;
+    }
+    td{
+        padding: 5px;
+        text-align: left; 
+    } 
+    tr:nth-child(even) {
+        background-color: #fff;
+    }
+    .labels {
+        width: 100%;
+        text-align: left;
+        padding-left: 40px;
+    }    
+    .inputs {
+        width: 100%;
+    }  
+    .philosophy{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .philosophy>div {
+        width: 100%;
+        text-align: justify;
+    }
+    .philosophy .ownerpic{
+        width: 100%;
+    }
+    .branchbox{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .branch {
+        width: 100%;
+    }
+    .footerinfo{
+        display: none;
+    }
+    /*================================================
+        FOOTER FOR MOBILE
+    ================================================*/
+    .desktopfooter{
+        display: none;
+    }
+    .mobilefooter {
+        min-height: 150px;
+        font-size: 25px;
+        width: 100%;
+        min-height: 30px;
+        background: lightgrey;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .mobilefooter div {
+        width: 70%;
+    }
+    .mobilefooter a {
+        width: 30%;
+        min-height: 20px;
+        border-radius: 5px;
+        background-color: rgb(212, 170, 91, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
